@@ -41,7 +41,7 @@ export default function HeroSection() {
 			</div>
 
       <Button 
-        className="absolute -bottom-[45px] md:left-4 lg:left-[42px] w-[90px] h-[90px] rounded-full flex items-end justify-center bg-ipec-blue hover:bg-hover-ipec-blue z-20"
+        className="absolute -bottom-[45px] left-4 lg:left-[42px] w-[90px] h-[90px] rounded-full flex items-end justify-center bg-ipec-blue hover:bg-hover-ipec-blue z-20"
         onClick={() => scrollToSection('services')}
       >
         <ArrowDown className="!w-8 !h-8 animate-bounce mb-4" />

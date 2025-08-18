@@ -57,7 +57,7 @@ export default function AdvantageSection() {
     >
       <div className="py-30 px-4 md:px-8 lg:px-0 container mx-auto relative h-full flex flex-col gap-y-16">
         <div className="flex flex-col gap-y-6">
-          <h3 className="text-white text-5xl font-bold">
+          <h3 className="text-white md:text-5xl text-4xl font-bold">
             {t("advantages.title")}
           </h3>
           <p className="text-white text-lg max-w-[612px]">

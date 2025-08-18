@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import ExperienceCard from "./ExperienceTab";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
@@ -14,7 +14,7 @@ export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselPr
   const [activeExperienceId, setActiveExperienceId] = useState<number>(1);
   const [api, setApi] = useState<CarouselApi>();
 
-  const initialExperiences = [
+  const initialExperiences = useMemo(() => [
     {
       id: 1,
       slug: ["all"],
@@ -50,9 +50,14 @@ export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselPr
       slug: ["new-technologies"],
       title: t("experience.categories.newTechnologies")
     }
-  ];
+  ], [t]);
 
   const [experiences, setExperiences] = useState(initialExperiences);
+
+  // Синхронизируем experiences с initialExperiences при изменении переводов
+  useEffect(() => {
+    setExperiences(initialExperiences);
+  }, [initialExperiences]);
 
 
 
@@ -67,6 +72,12 @@ export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselPr
       const currentExperience = experiences[selectedIndex];
       if (currentExperience) {
         setActiveExperienceId(currentExperience.id);
+        
+        // Находим соответствующий таб в initialExperiences и вызываем onTabChange
+        const correspondingTab = initialExperiences.find(exp => exp.id === currentExperience.id);
+        if (correspondingTab) {
+          onTabChange(correspondingTab.slug[0]); // Используем первый slug из массива
+        }
       }
     };
 
@@ -74,7 +85,7 @@ export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselPr
     return () => {
       api.off("select", handleSelect);
     };
-  }, [api, experiences]);
+  }, [api, experiences, onTabChange, initialExperiences]);
 
   const handleExperienceClick = (experienceId: number) => {
     setActiveExperienceId(experienceId);
