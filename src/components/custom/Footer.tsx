@@ -52,8 +52,8 @@ export default function Footer() {
               <Link href="tel:+77073214177" className="text-white text-lg">
                 +7-(707)-321-41-77
               </Link>
-              <Link href="mailto:info@ipec-energy.kz" className="text-white text-lg">
-                info@ipec-energy.kz
+              <Link href="mailto:info@ipec-energy.com" className="text-white text-lg">
+                info@ipec-energy.com
               </Link>
             </div>
             <div className="flex flex-col gap-y-3 w-[250px]">
