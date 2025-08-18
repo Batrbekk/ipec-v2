@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
-import { locales } from './i18n/config';
+import { locales, type Locale } from './i18n/config';
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // This typically corresponds to the `[locale]` segment
   let locale = await requestLocale;
 
   // Ensure that the incoming locale is valid
-  if (!locale || !locales.includes(locale as any)) {
+  if (!locale || !locales.includes(locale as Locale)) {
     locale = 'ru'; // fallback to default
   }
 
@@ -16,7 +16,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       locale,
       messages: (await import(`../messages/${locale}.json`)).default
     };
-  } catch (error) {
+  } catch {
     notFound();
   }
 });

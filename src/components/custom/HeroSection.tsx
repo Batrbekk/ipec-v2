@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useTranslations } from "next-intl";
 
@@ -10,7 +10,7 @@ export default function HeroSection() {
 	const { scrollToSection } = useScrollToSection();
 
 	return (
-		<section className="relative h-[45rem] bg-ipec-blue overflow-hidden">
+		<section className="relative h-[45rem] bg-ipec-blue overflow-visible">
 			{/* Фоновое видео */}
 			<video
 				className="absolute top-0 left-0 w-full h-full object-cover"
@@ -39,6 +39,13 @@ export default function HeroSection() {
           <ArrowRight className="!w-6 !h-6" />
         </Button>
 			</div>
+
+      <Button 
+        className="absolute -bottom-[45px] md:left-4 lg:left-[42px] w-[90px] h-[90px] rounded-full flex items-end justify-center bg-ipec-blue hover:bg-hover-ipec-blue z-20"
+        onClick={() => scrollToSection('services')}
+      >
+        <ArrowDown className="!w-8 !h-8 animate-bounce mb-4" />
+      </Button>
 		</section>
 	);
 }

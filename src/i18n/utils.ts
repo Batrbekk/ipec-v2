@@ -2,7 +2,6 @@
 
 import { cookies } from 'next/headers';
 import { defaultLocale, locales, type Locale } from './config';
-import { redirect } from 'next/navigation';
 
 export async function getUserLocale(): Promise<Locale> {
   const cookieStore = await cookies();
