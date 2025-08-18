@@ -7,37 +7,151 @@
     "team": "Team",
     "contacts": "Contacts"
   },
-  "common": {
-    "language": "Language",
-    "welcome": "Welcome to {company} v2!",
-    "description": "Project built using Next.js, TypeScript, Tailwind CSS and Shadcn/UI",
-    "technologies": "Technologies",
-    "ipecColors": "IPEC Colors",
-    "brandColors": "Brand color palette", 
-    "gettingStarted": "Getting Started",
-    "nextSteps": "Next steps for development",
-    "buttons": "Buttons",
-    "buttonVariants": "Various button variants from Shadcn/UI",
-    "form": "Form",
-    "simpleForm": "Simple form with input fields",
-    "name": "Name",
-    "email": "Email",
-    "enterName": "Enter your name",
-    "enterEmail": "Enter your email",
-    "submit": "Submit", 
-    "default": "Default",
-    "secondary": "Secondary",
-    "outline": "Outline",
-    "destructive": "Destructive"
+
+  "team": {
+    "title": "Team",
+    "description": "Test text",
+    "members": {
+      "ernar": {
+        "name": "Baizhaliev Ernar",
+        "position": "Partner",
+        "description": "Test description"
+      },
+      "talgat": {
+        "name": "Kadirov Talgat", 
+        "position": "Partner",
+        "description": "Test description"
+      },
+      "shaken": {
+        "name": "Kenzhehanov Shaken",
+        "position": "Chief Executive Officer",
+        "description": "Test description"
+      },
+      "assel": {
+        "name": "Assel Ospanova",
+        "position": "Chief Geologist",
+        "description": "Test description"
+      }
+    }
   },
-  "colors": {
-    "ipecGrey": "IPEC Grey",
-    "lightGrey": "Light Grey",
-    "ipecBlue": "IPEC Blue", 
-    "hoverBlue": "Hover Blue"
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company name",
+      "description": "Request description",
+      "placeholders": {
+        "name": "Enter your name",
+        "email": "jane@example.com",
+        "company": "Your company name",
+        "description": "Describe your request in detail..."
+      },
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "validation": {
+        "nameMin": "Name must contain at least 2 characters",
+        "emailInvalid": "Invalid email address",
+        "companyRequired": "Company name is required",
+        "descriptionMin": "Description must contain at least 10 characters",
+        "allFieldsRequired": "All fields are required"
+      },
+      "messages": {
+        "success": "Message sent successfully!",
+        "errorGeneral": "Sending error. Please try again.",
+        "errorSending": "Sending error",
+        "errorSubmitting": "Error sending message",
+        "emailSubject": "New request from {name} - {company}",
+        "successResponse": "Message sent successfully"
+      }
+    }
+  },
+  "experience": {
+    "categories": {
+      "all": "All work",
+      "management": "Asset Management", 
+      "oilService": "Oil Service",
+      "maDeals": "M&A Deal Support",
+      "dueDiligence": "Due Diligence",
+      "automation": "Business Process Automation",
+      "newTechnologies": "New Technology Development"
+    },
+    "projects": {
+      "shevchenko": {
+        "title": "Shevchenko Deposit",
+        "description": "Comprehensive review and feasibility study development for nickel-cobalt deposit. Financial, tax, legal and technical due diligence. Joint feasibility study development with Wardell Armstrong International, Bateman, Oriel Resources"
+      },
+      "kultuk": {
+        "title": "Kultuk Oil and Gas Project Feasibility Study",
+        "description": "Full-scale feasibility study of the Kultuk oil and gas project for the Ministry of Finance of Azerbaijan"
+      },
+      "kalamkas": {
+        "title": "Kalamkas and Zhetybai Fields",
+        "description": "SPE PRMS reserves assessment for 15 fields, including Kalamkas and Zhetybai"
+      },
+      "vagonservice": {
+        "title": "JSC Vagonservice",
+        "description": "Warehouse inventory management system for JSC Vagonservice"
+      },
+      "kazmortransflot": {
+        "title": "LLP NMSK Kazmortransflot",
+        "description": "Cargo transportation system for LLP NMSK Kazmortransflot"
+      },
+      "urikhtau": {
+        "title": "Urikhtau Field Feasibility Study",
+        "description": "Development of full-scale feasibility study for Urikhtau field in accordance with Building Code RK 1.02-04-2022"
+      },
+      "karazhanbas": {
+        "title": "North Karazhanbas and Kamenistoye",
+        "description": "Comprehensive management of oil operators at North Karazhanbas and Kamenistoye fields"
+      }
+    }
+  },
+  "about": {
+    "title": "About us",
+    "subtitle": "IPEC Energy Kazakhstan",
+    "description1": "An independent research and business analytics company providing clients with reliable data and strategic insights for more effective decision making, especially in the oil & gas and mining industries.",
+    "description2": "IPEC Energy is a 'house of knowledge' bringing together experts with international experience at Halliburton, Schlumberger, investment banks, and Big Three and Big Four consulting companies. We work at the intersection of engineering, economics-finance, law and IT, providing an integrated approach to solving complex problems.",
+    "contactButton": "Contact us"
+  },
+  "hero": {
+    "title": "IPEC Energy - Integrated Petroleum Engineering",
+    "contactButton": "Contact us"
+  },
+  "advantages": {
+    "title": "Advantages",
+    "description": "Our strengths are a combination of global experience, deep industry knowledge and an integrated approach. We provide full project lifecycle support, relying on licenses, expertise and pragmatic vision to guarantee clients results that exceed expectations.",
+    "expertise": {
+      "title": "Expertise",
+      "description": "Team with international experience and interdisciplinary expertise"
+    },
+    "licenses": {
+      "title": "Licenses",
+      "description": "Availability of necessary licenses for work in the oil and gas industry"
+    },
+    "support": {
+      "title": "Support",
+      "description": "Possibility of full project support: from idea to implementation"
+    },
+    "flexibility": {
+      "title": "Flexibility",
+      "description": "Flexible and pragmatic approach to problem solving"
+    },
+    "contactButton": "Contact us",
+    "contactDescription": "Your project is our priority. Leave a request and we will contact you"
+  },
+  "experienceSection": {
+    "title": "Our experience",
+    "description": "IPEC Energy Kazakhstan combines expertise in asset management, feasibility study development, independent reserves assessment, business process automation and deal support. We work at all stages of the project lifecycle - from strategic planning and technical design to solution implementation and operational efficiency achievement.",
+    "showMore": "Show more"
   },
   "footer": {
-    "madeWith": "Made with ❤️ using Next.js and Shadcn/UI"
+    "contactUs": "Write to us",
+    "futureTitle": "Start building your future with us",
+    "description": "Test description",
+    "contacts": "Contacts",
+    "address": "Address",
+    "addressText": "Astana, Turan Avenue 30A, 6th floor, office 607 SAT Tower Business Center",
+    "copyright": "© 2017 - 2025 IPEC Energy Kazakhstan. All rights reserved."
   },
   "services": {
     "subtitle": "What we do",
@@ -87,6 +201,55 @@
         "legal": "Legal expertise",
         "technical": "Technical expertise", 
         "commercial": "Commercial evaluation"
+      }
+    },
+    "carousel": {
+      "assetManagement": {
+        "title": "Asset Management",
+        "services": [
+          "Development of company development strategy in oil and gas industry",
+          "Anti-crisis management and restructuring",
+          "Financial and operational business audit",
+          "Optimization of production and investment activities",
+          "Building KPI system and improving business process efficiency",
+          "Full operational management of oil assets to increase profitability and company value"
+        ]
+      },
+      "oilService": {
+        "title": "Oil Service",
+        "services": [
+          "Development of technical and economic feasibility studies (TEFS)",
+          "Construction and interpretation of 3D geological models",
+          "Reserves assessment according to international SPE PRMS classification",
+          "Selection and design of technological solutions and gas equipment",
+          "Expertise of project and technical documentation"
+        ]
+      },
+      "maDeals": {
+        "title": "M&A Deal Support",
+        "services": [
+          "Market sounding – scanning the market for potential investors",
+          "Comprehensive preparation of investment proposals",
+          "Deal structuring and negotiation support",
+          "Support in the process of signing and executing SPA/SHA",
+          "Risk analysis and structural protection of client interests"
+        ]
+      },
+      "dueDiligenceCarousel": {
+        "title": "Due Diligence",
+        "services": [
+          "Comprehensive analysis (financial, tax, legal and technical) due diligence of objects (including deposits)",
+          "ESG analysis and verification of compliance with regulatory requirements"
+        ]
+      },
+      "automation": {
+        "title": "Business Process Automation",
+        "services": [
+          "Development of custom ERP and WMS systems for Customer specifics",
+          "Automation of management and operational accounting",
+          "Integration with 1C, SAP and other accounting systems",
+          "Implementation of solutions for logistics, procurement and inventory management"
+        ]
       }
     }
   }

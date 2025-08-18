@@ -1,7 +1,14 @@
+"use client";
+
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+	const t = useTranslations();
+	const { scrollToSection } = useScrollToSection();
+
 	return (
 		<section className="relative h-[45rem] bg-ipec-blue overflow-hidden">
 			{/* Фоновое видео */}
@@ -22,10 +29,13 @@ export default function HeroSection() {
 			
 			<div className="z-10 relative px-4 lg:px-[42px] flex flex-col justify-center h-full gap-y-12 md:gap-y-8 pt-[50%] md:pt-0">
 				<h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-regular w-full max-w-[374px] md:max-w-[41rem] lg:max-w-[52rem]">
-					IPEC Energy - Integrated Petroleum Engineering
+					{t("hero.title")}
 				</h1>
-        <Button className="bg-white hover:bg-ipec-blue text-ipec-blue hover:text-white max-w-xs rounded-none flex items-center justify-between !px-6 !py-3.5 h-fit text-lg">
-          Связаться с нами
+        <Button 
+          className="bg-white hover:bg-ipec-blue text-ipec-blue hover:text-white max-w-xs rounded-none flex items-center justify-between !px-6 !py-3.5 h-fit text-lg"
+          onClick={() => scrollToSection('contact')}
+        >
+          {t("hero.contactButton")}
           <ArrowRight className="!w-6 !h-6" />
         </Button>
 			</div>

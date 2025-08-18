@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import ExperienceCard from "./ExperienceTab";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 
@@ -9,6 +10,7 @@ interface ExperienceCarouselProps {
 }
 
 export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselProps) {
+  const t = useTranslations();
   const [activeExperienceId, setActiveExperienceId] = useState<number>(1);
   const [api, setApi] = useState<CarouselApi>();
 
@@ -16,37 +18,37 @@ export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselPr
     {
       id: 1,
       slug: ["all"],
-      title: "Все работы"
+      title: t("experience.categories.all")
     },
     {
       id: 2,
       slug: ["management"],
-      title: "Управление активами"
+      title: t("experience.categories.management")
     },
     {
       id: 3,
       slug: ["oil-service"],
-      title: "Нефтесервис"
+      title: t("experience.categories.oilService")
     },
     {
       id: 4,
       slug: ["m-a"],
-      title: "Сопровождение сделок (M&A)"
+      title: t("experience.categories.maDeals")
     },  
     {
       id: 5,
       slug: ["due-diligence"],
-      title: "Due Diligence"
+      title: t("experience.categories.dueDiligence")
     },
     {
       id: 6,
       slug: ["automation"],
-      title: "Автоматизация бизнес-процессов"
+      title: t("experience.categories.automation")
     },
     {
       id: 7,
       slug: ["new-technologies"],
-      title: "Разработка новых технологий"
+      title: t("experience.categories.newTechnologies")
     }
   ];
 

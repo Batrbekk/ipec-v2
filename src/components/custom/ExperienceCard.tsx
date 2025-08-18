@@ -1,20 +1,27 @@
+import { useTranslations } from "next-intl";
+
 interface ExperienceCardProps {
   title: string;
   slug: string[];
   description: string;
 }
 
-const slugToNameMap: Record<string, string> = {
-  "all": "Все работы",
-  "management": "Управление активами",
-  "oil-service": "Нефтесервис",
-  "m-a": "Сопровождение сделок (M&A)",
-  "due-diligence": "Due Diligence",
-  "automation": "Автоматизация бизнес-процессов",
-  "new-technologies": "Разработка новых технологий"
+const getSlugTranslationKey = (slug: string): string => {
+  const slugMap: Record<string, string> = {
+    "all": "all",
+    "management": "management",
+    "oil-service": "oilService",
+    "m-a": "maDeals",
+    "due-diligence": "dueDiligence",
+    "automation": "automation",
+    "new-technologies": "newTechnologies"
+  };
+  return `experience.categories.${slugMap[slug] || slug}`;
 };
 
 export default function ExperienceCard({ title, slug, description }: ExperienceCardProps) {
+  const t = useTranslations();
+  
   return (
     <div className="flex flex-col lg:flex-row items-start gap-6 p-6 border border-ipec-blue">
       <div className="w-full lg:w-[400px] h-[200px] lg:flex-shrink-0 bg-light-grey" />
@@ -22,7 +29,7 @@ export default function ExperienceCard({ title, slug, description }: ExperienceC
         <div className="flex gap-x-6 gap-y-2 flex-wrap">
           {slug.map((item) => (
             <div key={item} className="text-ipec-blue text-sm border-b border-ipec-blue p-1">
-              {slugToNameMap[item] || item}
+              {t(getSlugTranslationKey(item))}
             </div>
           ))}
         </div>

@@ -1,71 +1,45 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import ServiceCard from "./ServiceCard";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 
 export default function ServicesCarousel() {
+  const t = useTranslations();
   const [activeServiceId, setActiveServiceId] = useState<number>(1);
   const [api, setApi] = useState<CarouselApi>();
-
 
   const initialServices = [
     {
       id: 1,
-      title: "Управление активами",
-      services: [
-        "Разработка стратегии развития компаний в нефтегазовой отрасли",
-        "Антикризисное управление и реструктуризация",
-        "Финансовый и операционный аудит бизнеса",
-        "Оптимизация производственной и инвестиционной деятельности",
-        "Построение системы KPI и повышения эффективности бизнес-процессов",
-        "Полное операционное управление нефтяными активами с целью увеличения рентабельности и стоимости компании"
-      ],
+      title: t("services.carousel.assetManagement.title"),
+      services: t.raw("services.carousel.assetManagement.services") as string[],
       image: "/image/services/1.png"
     },
     {
       id: 2,
-      title: "Нефтесервис",
-      services: [
-        "Разработка технико-экономических обоснований (ТЭО)",
-        "Построение и интерпретация 3D геологических моделей",
-        "Оценка запасов по международной классификации SPE PRMS",
-        "Подбор и проектирование технологических решений и газового оборудования",
-        "Экспертиза проектной и технической документации"
-      ],
+      title: t("services.carousel.oilService.title"),
+      services: t.raw("services.carousel.oilService.services") as string[],
       image: "/image/services/2.png"
     },
     {
       id: 3,
-      title: "Сопровождение сделок (M&A)",
-      services: [
-        "Market sounding – сканирование рынка в поисках потенциальных инвесторов",
-        "Комплексная подготовка инвестиционных предложений",
-        "Структурирование сделок и сопровождение переговоров",
-        "Поддержка в процессе подписания и исполнения SPA/SHA",
-        "Анализ рисков и структурная защита интересов клиента"
-      ],
+      title: t("services.carousel.maDeals.title"),
+      services: t.raw("services.carousel.maDeals.services") as string[],
       image: "/image/services/3.png"
     },
     {
       id: 4,
-      title: "Due Diligence",
-      services: [
-        "Комплексный анализ (финансовый, налоговый, юридический и технический) due diligence объектов (включая месторождения)",
-        "ESG-анализ и проверка соответствия регуляторным требованиям"
-      ],
+      title: t("services.carousel.dueDiligenceCarousel.title"),
+      services: t.raw("services.carousel.dueDiligenceCarousel.services") as string[],
       image: "/image/services/4.png"
     },
     {
       id: 5,
-      title: "Автоматизация бизнес-процессов",
-      services: [
-        "Разработка пользовательских ERP- и WMS-систем под специфику Заказчиков",
-        "Автоматизация управленческого и операционного учета",
-        "Интеграция с 1С, SAP и другими учетными системами",
-        "Внедрение решений для логистики, снабжения и управления запасами"
-      ],
+      title: t("services.carousel.automation.title"),
+      services: t.raw("services.carousel.automation.services") as string[],
       image: "/image/services/5.png"
     }
   ];

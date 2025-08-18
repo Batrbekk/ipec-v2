@@ -5,47 +5,49 @@ export interface ExperienceCardData {
   description: string;
 }
 
-export const experienceCards: ExperienceCardData[] = [
+export const getExperienceCards = (t: (key: string) => string): ExperienceCardData[] => [
   {
     id: 1,
-    title: "Месторождение Шевченко",
+    title: t("experience.projects.shevchenko.title"),
     slug: ["m-a", "due-diligence"],
-    description: "Комплексная проверка и разработка ТЭО никель-кобальтового месторождения. Финансовый, налоговый, юридический и технический due diligence. Совместная разработка ТЭО с Wardell Armstrong International, Bateman, Oriel Resources"
+    description: t("experience.projects.shevchenko.description")
   },
   {
     id: 2,
-    title: "ТЭО нефтегазового проекта «Култук»",
+    title: t("experience.projects.kultuk.title"),
     slug: ["oil-service"],
-    description: "Полномасштабное ТЭО нефтегазового проекта «Култук» для Министерства финансов Азербайджана"
+    description: t("experience.projects.kultuk.description")
   },
   {
     id: 3,
-    title: "Месторождения Каламкас и Жетибай",
+    title: t("experience.projects.kalamkas.title"),
     slug: ["oil-service"],
-    description: "Оценка запасов по SPE PRMS на 15 месторождениях, включая Каламкас и Жетибай"
+    description: t("experience.projects.kalamkas.description")
   },
   {
     id: 4,
-    title: "АО «Вагонсервис»",
+    title: t("experience.projects.vagonservice.title"),
     slug: ["automation"],
-    description: "Система управления складскими запасами для АО «Вагонсервис»"
+    description: t("experience.projects.vagonservice.description")
   },
   {
     id: 5,
-    title: "ТОО «НМСК «Казмортрансфлот»",
+    title: t("experience.projects.kazmortransflot.title"),
     slug: ["automation"],
-    description: "Система грузоперевозок для ТОО «НМСК «Казмортрансфлот»"
+    description: t("experience.projects.kazmortransflot.description")
   },
   {
     id: 6,
-    title: "ТЭО месторождения Урихтау",
+    title: t("experience.projects.urikhtau.title"),
     slug: ["oil-service"],
-    description: "Разработка полномасштабного ТЭО месторождения Урихтау в соответствии с СН РК 1.02-04-2022"
+    description: t("experience.projects.urikhtau.description")
   },
   {
     id: 7,
-    title: "Северный Каражанбас и Каменистое",
+    title: t("experience.projects.karazhanbas.title"),
     slug: ["management"],
-    description: "Комплексное управление нефтяными операторами на месторождениях Северный Каражанбас и Каменистое"
+    description: t("experience.projects.karazhanbas.description")
   }
 ];
+
+

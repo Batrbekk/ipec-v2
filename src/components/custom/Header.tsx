@@ -2,22 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import NavLink from "./NavLink";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslations } from 'next-intl';
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
 export default function Header() {
 	const t = useTranslations('navigation');
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const { scrollToSection } = useScrollToSection();
 
 	const navLinks = [
-		{ href: "/services", label: t('services') },
-		{ href: "/advantages", label: t('advantages') },
-		{ href: "/experience", label: t('experience') },
-		{ href: "/about", label: t('about') },
-		{ href: "/team", label: t('team') },
+		{ href: "/#services", label: t('services'), id: 'services' },
+		{ href: "/#about", label: t('about'), id: 'about' },
+		{ href: "/#experience", label: t('experience'), id: 'experience' },
+		{ href: "/#advantages", label: t('advantages'), id: 'advantages' },
+		{ href: "/#team", label: t('team'), id: 'team' }
 	];
 
 	const toggleMobileMenu = () => {
@@ -46,13 +47,24 @@ export default function Header() {
 				</Link>
 				<div className="hidden lg:flex items-center h-full">
 					{navLinks.map((link) => (
-						<NavLink key={link.href} href={link.href} label={link.label} />
+						<button
+							key={link.href}
+							onClick={() => scrollToSection(link.id)}
+							className="text-white px-3 h-full flex items-center justify-center border-r-[0.5px] border-white hover:bg-hover-ipec-blue cursor-pointer"
+						>
+							{link.label}
+						</button>
 					))}
 				</div>
       </div>
 			<div className="flex items-center h-full">
 				<div className="h-full hidden md:block">
-					<NavLink href="/contacts" label={t('contacts')} />
+					<button
+						onClick={() => scrollToSection('contact')}
+						className="text-white px-3 h-full flex items-center justify-center border-r-[0.5px] border-white hover:bg-hover-ipec-blue cursor-pointer"
+					>
+						{t('contacts')}
+					</button>
 				</div>
 				<LanguageSwitcher />
 				<div 
@@ -86,10 +98,13 @@ export default function Header() {
 			}`}>
 				<div className="flex flex-col">
 					{navLinks.map((link, index) => (
-						<Link
+						<button
 							key={link.href}
-							href={link.href}
-							className={`text-ipec-blue hover:bg-hover-ipec-blue hover:text-white px-6 py-4 border-b-[0.5px] border-b-ipec-blue ${
+							onClick={() => {
+								scrollToSection(link.id);
+								setIsMobileMenuOpen(false);
+							}}
+							className={`text-ipec-blue hover:bg-hover-ipec-blue hover:text-white px-6 py-4 border-b-[0.5px] border-b-ipec-blue text-left ${
 								isMobileMenuOpen 
 									? 'translate-x-0 opacity-100' 
 									: 'translate-x-4 opacity-0'
@@ -97,14 +112,16 @@ export default function Header() {
 							style={{
 								transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : '0ms'
 							}}
-							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							{link.label}
-						</Link>
+						</button>
 					))}
-					<Link
-						href="/contacts"
-						className={`text-ipec-blue hover:bg-hover-ipec-blue hover:text-white px-6 py-4 ${
+					<button
+						onClick={() => {
+							scrollToSection('contact');
+							setIsMobileMenuOpen(false);
+						}}
+						className={`text-ipec-blue hover:bg-hover-ipec-blue hover:text-white px-6 py-4 text-left ${
 							isMobileMenuOpen 
 								? 'translate-x-0 opacity-100' 
 								: 'translate-x-4 opacity-0'
@@ -112,10 +129,9 @@ export default function Header() {
 						style={{
 							transitionDelay: isMobileMenuOpen ? `${navLinks.length * 50}ms` : '0ms'
 						}}
-						onClick={() => setIsMobileMenuOpen(false)}
 					>
 						{t('contacts')}
-					</Link>
+					</button>
 				</div>
 			</div>
     </header>

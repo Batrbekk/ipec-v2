@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/custom/Header";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getLocale } from 'next-intl/server';
+import Footer from "@/components/custom/Footer";
 
 export const metadata: Metadata = {
   title: "IPEC Energy Kazakhstan",
@@ -27,6 +28,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
+          <Footer />
           <Toaster />
         </NextIntlClientProvider>
       </body>
