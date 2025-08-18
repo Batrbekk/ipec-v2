@@ -1,0 +1,93 @@
+{
+  "navigation": {
+    "services": "What we do",
+    "advantages": "Advantages",
+    "experience": "Our experience",
+    "about": "About us", 
+    "team": "Team",
+    "contacts": "Contacts"
+  },
+  "common": {
+    "language": "Language",
+    "welcome": "Welcome to {company} v2!",
+    "description": "Project built using Next.js, TypeScript, Tailwind CSS and Shadcn/UI",
+    "technologies": "Technologies",
+    "ipecColors": "IPEC Colors",
+    "brandColors": "Brand color palette", 
+    "gettingStarted": "Getting Started",
+    "nextSteps": "Next steps for development",
+    "buttons": "Buttons",
+    "buttonVariants": "Various button variants from Shadcn/UI",
+    "form": "Form",
+    "simpleForm": "Simple form with input fields",
+    "name": "Name",
+    "email": "Email",
+    "enterName": "Enter your name",
+    "enterEmail": "Enter your email",
+    "submit": "Submit", 
+    "default": "Default",
+    "secondary": "Secondary",
+    "outline": "Outline",
+    "destructive": "Destructive"
+  },
+  "colors": {
+    "ipecGrey": "IPEC Grey",
+    "lightGrey": "Light Grey",
+    "ipecBlue": "IPEC Blue", 
+    "hoverBlue": "Hover Blue"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ using Next.js and Shadcn/UI"
+  },
+  "services": {
+    "subtitle": "What we do",
+    "title": "IPEC Energy Kazakhstan - a comprehensive solution for you and your company",
+    "description": "We form a synergistic approach, combining engineering, financial-economic, legal IT expertise to provide our clients with complete support - from idea to implementation.",
+    "assetManagement": {
+      "title": "Asset Management",
+      "description": "Comprehensive asset management for efficiency maximization",
+      "details": {
+        "strategy": "Development of company development strategy in oil and gas industry",
+        "anticrisis": "Anti-crisis management and restructuring",
+        "restructuring": "Restructuring",
+        "audit": "Financial and operational audit of oil and gas projects",
+        "optimization": "Optimization of production and investment activities",
+        "systems": "Building KPI system and improving business process efficiency",
+        "management": "Full operational management of oil assets to increase profitability and company value",
+        "cost": "Cost engineering"
+      }
+    },
+    "oilService": {
+      "title": "Oil Service",
+      "description": "Professional oil service solutions",
+      "details": {
+        "development": "Development of company development strategy in oil and gas industry",
+        "anticrisis": "Anti-crisis management and restructuring",
+        "audit": "Financial and operational audit of oil and gas projects",
+        "optimization": "Optimization of production and investment activities",
+        "systems": "Building KPI system and improving business process efficiency",
+        "management": "Full operational management of oil assets to increase profitability and company value"
+      }
+    },
+    "maDeals": {
+      "title": "M&A Deal Support",
+      "description": "Professional merger and acquisition deal support",
+      "details": {
+        "evaluation": "Asset and company valuation",
+        "structuring": "Deal structuring",
+        "diligence": "Due Diligence procedures",
+        "negotiations": "Negotiations management"
+      }
+    },
+    "dueDiligence": {
+      "title": "Due Diligence",
+      "description": "Comprehensive asset and business process review",
+      "details": {
+        "financial": "Financial analysis",
+        "legal": "Legal expertise",
+        "technical": "Technical expertise", 
+        "commercial": "Commercial evaluation"
+      }
+    }
+  }
+}
