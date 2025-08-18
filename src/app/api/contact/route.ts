@@ -11,15 +11,15 @@ interface ContactFormData {
 }
 
 export async function POST(request: NextRequest) {
+  // Получаем локаль из заголовков или используем русский по умолчанию
+  const locale = request.headers.get('accept-language')?.includes('kk') ? 'kk' : 
+                 request.headers.get('accept-language')?.includes('en') ? 'en' : 'ru';
+  
+  const t = await getTranslations({ locale });
+
   try {
     const body: ContactFormData = await request.json();
     const { name, email, company, description } = body;
-
-    // Получаем локаль из заголовков или используем русский по умолчанию
-    const locale = request.headers.get('accept-language')?.includes('kk') ? 'kk' : 
-                   request.headers.get('accept-language')?.includes('en') ? 'en' : 'ru';
-    
-    const t = await getTranslations({ locale });
 
     // Валидация данных
     if (!name || !email || !company || !description) {
