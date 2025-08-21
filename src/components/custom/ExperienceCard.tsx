@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface ExperienceCardProps {
   title: string;
   slug: string[];
   description: string;
+  img?: string;
 }
 
 const getSlugTranslationKey = (slug: string): string => {
@@ -19,12 +21,18 @@ const getSlugTranslationKey = (slug: string): string => {
   return `experience.categories.${slugMap[slug] || slug}`;
 };
 
-export default function ExperienceCard({ title, slug, description }: ExperienceCardProps) {
+export default function ExperienceCard({ title, slug, description, img }: ExperienceCardProps) {
   const t = useTranslations();
   
   return (
     <div className="flex flex-col lg:flex-row items-start gap-6 p-6 border border-ipec-blue">
-      <div className="w-full lg:w-[400px] h-[200px] lg:flex-shrink-0 bg-light-grey" />
+      {img ? (
+        <div className="relative w-full lg:w-[400px] h-[200px] lg:flex-shrink-0">
+          <Image src={img} alt={title} fill className="object-cover" priority />
+        </div>
+      ) : (
+        <div className="w-full lg:w-[400px] h-[200px] lg:flex-shrink-0 bg-light-grey" />
+      )}
       <div className="flex flex-col gap-y-6">
         <div className="flex gap-x-6 gap-y-2 flex-wrap">
           {slug.map((item) => (

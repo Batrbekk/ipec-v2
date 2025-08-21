@@ -10,7 +10,7 @@
 
   "team": {
     "title": "Team",
-    "description": "Test text",
+    "description": "Meet our team professionals — experts who bring innovative solutions to life",
     "members": {
       "ernar": {
         "name": "Baizhaliev Ernar",
@@ -147,7 +147,7 @@
   "footer": {
     "contactUs": "Write to us",
     "futureTitle": "Start building your future with us",
-    "description": "Test description",
+    "description": "We are ready to help you with the implementation of projects of any complexity. Leave a request and our experts will contact you as soon as possible.",
     "contacts": "Contacts",
     "address": "Address",
     "addressText": "Astana, Turan Avenue 30A, 6th floor, office 607 SAT Tower Business Center",

@@ -33,10 +33,10 @@ export default function Footer() {
             <h3 className="text-white text-2xl font-bold">
               {t("footer.contactUs")}
             </h3>
-            <h2 className="text-white text-4xl font-bold w-full md:w-2/3 lg:w-full">
+            <h2 className="text-white text-4xl font-bold w-full md:w-2/3">
               {t("footer.futureTitle")}
             </h2>
-            <p className="text-white text-xl">
+            <p className="text-white text-xl w-full md:w-2/3">
               {t("footer.description")}
             </p>
           </div>

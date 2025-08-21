@@ -55,6 +55,7 @@ export default function ExperienceSection() {
               title={card.title}
               slug={card.slug}
               description={card.description}
+              img={card.img}
             />
           ))}
         </div>

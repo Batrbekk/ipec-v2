@@ -40,7 +40,7 @@ export default function TeamSection() {
       <h3 className="text-ipec-blue text-5xl font-bold">
         {t("team.title")}
       </h3>
-      <p className="text-ipec-grey">{t("team.description")}</p>
+      <p className="text-ipec-grey max-w-full md:max-w-xl">{t("team.description")}</p>
       {/* Desktop версия - показываем все карточки */}
       <div className="hidden lg:flex flex-wrap gap-x-4 gap-y-12">
         {teamCards.map((card) => (
