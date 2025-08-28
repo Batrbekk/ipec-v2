@@ -3,7 +3,7 @@ import ServiceSection from "@/components/custom/ServiceSection";
 import AboutSection from "@/components/custom/AboutSection";
 import ExperienceSection from "@/components/custom/ExperienceSection";
 import AdvantageSection from "@/components/custom/AdvantageSection";
-import TeamSection from "@/components/custom/TeamSection";
+// import TeamSection from "@/components/custom/TeamSection";
 
 export default function Home() {
 
@@ -14,7 +14,7 @@ export default function Home() {
       <AboutSection />
       <ExperienceSection />
       <AdvantageSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
     </main>
   );
 }

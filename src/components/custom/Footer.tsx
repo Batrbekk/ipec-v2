@@ -16,7 +16,7 @@ export default function Footer() {
 		{ href: "/#about", label: tNav('about'), id: 'about' },
 		{ href: "/#experience", label: tNav('experience'), id: 'experience' },
 		{ href: "/#advantages", label: tNav('advantages'), id: 'advantages' },
-		{ href: "/#team", label: tNav('team'), id: 'team' },
+		// { href: "/#team", label: tNav('team'), id: 'team' },
 	];
 
   return (

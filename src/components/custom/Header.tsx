@@ -18,7 +18,7 @@ export default function Header() {
 		{ href: "/#about", label: t('about'), id: 'about' },
 		{ href: "/#experience", label: t('experience'), id: 'experience' },
 		{ href: "/#advantages", label: t('advantages'), id: 'advantages' },
-		{ href: "/#team", label: t('team'), id: 'team' }
+		// { href: "/#team", label: t('team'), id: 'team' }
 	];
 
 	const toggleMobileMenu = () => {
