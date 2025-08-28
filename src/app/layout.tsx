@@ -8,7 +8,7 @@ import { getMessages, getLocale } from 'next-intl/server';
 import Footer from "@/components/custom/Footer";
 
 export const metadata: Metadata = {
-  title: "IPEC Energy Kazakhstan",
+  title: "IPEC Energy",
   description: "Integrated Petroleum Engineering Company",
 };
 

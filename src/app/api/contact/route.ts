@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     // Настройка письма
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "n.kadirov@ipec-energy.com",
+      to: "info@ipec-energy.com",
       subject: t("contact.form.messages.emailSubject", { name, company }),
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
           </div>
 
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; font-size: 12px; color: #6c757d;">
-            <p>Это письмо было отправлено автоматически с сайта IPEC Energy Kazakhstan.</p>
+            <p>Это письмо было отправлено автоматически с сайта IPEC Energy.</p>
             <p>Дата отправки: ${new Date().toLocaleString("ru-RU", {
               timeZone: "Asia/Almaty",
             })}</p>
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       `,
       // Также добавим текстовую версию
       text: `
-        Новое обращение с сайта IPEC Energy Kazakhstan
+        Новое обращение с сайта IPEC Energy
 
         Имя: ${name}
         Email: ${email}

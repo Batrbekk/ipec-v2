@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <header className="w-full h-14 bg-ipec-blue flex items-center justify-between relative">
       <div className="flex items-center h-full">
-				<Link href="/" className="h-14 w-[256px] relative">
+				<Link href="/" className="h-14 w-[148px] relative">
 					<Image src="/image/logo.svg" alt="IPEC" fill />
 				</Link>
 				<div className="hidden lg:flex items-center h-full">

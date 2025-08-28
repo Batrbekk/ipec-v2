@@ -42,8 +42,8 @@ export default function Footer() {
           </div>
           <ContactForm />
         </div>
-        <Link href="/" className="max-w-[360px]">
-          <Image src="/image/white-logo.svg" alt="IPEC Energy Kazakhstan" width={360} height={38} />
+        <Link href="/" className="max-w-[190px]">
+          <Image src="/image/white-logo.svg" alt="IPEC Energy" width={360} height={38} />
         </Link>
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between pb-8 border-b border-white gap-y-8">
           <div className="flex flex-col md:flex-row items-start gap-y-8 gap-x-8">

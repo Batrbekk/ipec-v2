@@ -108,7 +108,7 @@
   },
   "about": {
     "title": "About us",
-    "subtitle": "IPEC Energy Kazakhstan",
+    "subtitle": "IPEC Energy",
     "description1": "An independent research and business analytics company providing clients with reliable data and strategic insights for more effective decision making, especially in the oil & gas and mining industries.",
     "description2": "IPEC Energy is a 'house of knowledge' bringing together experts with international experience at Halliburton, Schlumberger, investment banks, and Big Three and Big Four consulting companies. We work at the intersection of engineering, economics-finance, law and IT, providing an integrated approach to solving complex problems.",
     "contactButton": "Contact us"
@@ -141,7 +141,7 @@
   },
   "experienceSection": {
     "title": "Our experience",
-    "description": "IPEC Energy Kazakhstan combines expertise in asset management, feasibility study development, independent reserves assessment, business process automation and deal support. We work at all stages of the project lifecycle - from strategic planning and technical design to solution implementation and operational efficiency achievement.",
+    "description": "IPEC Energy combines expertise in asset management, feasibility study development, independent reserves assessment, business process automation and deal support. We work at all stages of the project lifecycle - from strategic planning and technical design to solution implementation and operational efficiency achievement.",
     "showMore": "Show more"
   },
   "footer": {
@@ -151,11 +151,11 @@
     "contacts": "Contacts",
     "address": "Address",
     "addressText": "Astana, Turan Avenue 30A, 6th floor, office 607 SAT Tower Business Center",
-    "copyright": "© 2017 - 2025 IPEC Energy Kazakhstan. All rights reserved."
+    "copyright": "© 2017 - 2025 IPEC Energy. All rights reserved."
   },
   "services": {
     "subtitle": "What we do",
-    "title": "IPEC Energy Kazakhstan - a comprehensive solution for you and your company",
+    "title": "IPEC Energy - a comprehensive solution for you and your company",
     "description": "We form a synergistic approach, combining engineering, financial-economic, legal IT expertise to provide our clients with complete support - from idea to implementation.",
     "assetManagement": {
       "title": "Asset Management",
