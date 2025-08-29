@@ -73,7 +73,9 @@
       "maDeals": "M&A Deal Support",
       "dueDiligence": "Due Diligence",
       "automation": "Business Process Automation",
-      "newTechnologies": "New Technology Development"
+      "newTechnologies": "New Technology Development",
+      "bisuness-valuation": "Business Valuation",
+      "valuation-spe-prms": "Reserves Valuation by SPE PRMS"
     },
     "projects": {
       "shevchenko": {
@@ -85,8 +87,8 @@
         "description": "Full-scale feasibility study of the Kultuk oil and gas project for the Ministry of Finance of Azerbaijan"
       },
       "kalamkas": {
-        "title": "Kalamkas and Zhetybai Fields",
-        "description": "SPE PRMS reserves assessment for 15 fields, including Kalamkas and Zhetybai"
+        "title": "Reserves assessment for «Mangistaumunaigas» JSC",
+        "description": "Assessment of oil reserves according to SPE PRMS standards at 15 fields, including Kalamkas and Zhetibai"
       },
       "vagonservice": {
         "title": "JSC Vagonservice",
@@ -114,7 +116,7 @@
     "contactButton": "Contact us"
   },
   "hero": {
-    "title": "IPEC Energy - Integrated Petroleum Engineering",
+    "title": "IPEC Energy - Integrated Petroleum Engineering Company",
     "contactButton": "Contact us"
   },
   "advantages": {
@@ -155,7 +157,7 @@
   },
   "services": {
     "subtitle": "What we do",
-    "title": "IPEC Energy - a comprehensive solution for you and your company",
+    "title": "IPEC Energy - a comprehensive solution for your company",
     "description": "We form a synergistic approach, combining engineering, financial-economic, legal IT expertise to provide our clients with complete support - from idea to implementation.",
     "assetManagement": {
       "title": "Asset Management",

@@ -9,24 +9,24 @@ export interface ExperienceCardData {
 export const getExperienceCards = (t: (key: string) => string): ExperienceCardData[] => [
   {
     id: 1,
-    title: t("experience.projects.shevchenko.title"),
-    slug: ["m-a", "due-diligence"],
-    description: t("experience.projects.shevchenko.description"),
-    img: "/image/experience/1.webp"
+    title: t("experience.projects.kalamkas.title"),
+    slug: ["oil-service", "valuation-spe-prms"],
+    description: t("experience.projects.kalamkas.description"),
+    img: "/image/experience/3.png"
   },
   {
     id: 2,
-    title: t("experience.projects.kultuk.title"),
-    slug: ["oil-service"],
-    description: t("experience.projects.kultuk.description"),
-    img: "/image/experience/2.jpg"
+    title: t("experience.projects.karazhanbas.title"),
+    slug: ["management"],
+    description: t("experience.projects.karazhanbas.description"),
+    img: "/image/experience/7.jpg"
   },
   {
     id: 3,
-    title: t("experience.projects.kalamkas.title"),
-    slug: ["oil-service"],
-    description: t("experience.projects.kalamkas.description"),
-    img: "/image/experience/3.jpg"
+    title: t("experience.projects.kamenistoe.title"),
+    slug: ["management"],
+    description: t("experience.projects.kamenistoe.description"),
+    img: "/image/experience/8.png"
   },
   {
     id: 4,
@@ -51,10 +51,10 @@ export const getExperienceCards = (t: (key: string) => string): ExperienceCardDa
   },
   {
     id: 7,
-    title: t("experience.projects.karazhanbas.title"),
-    slug: ["management"],
-    description: t("experience.projects.karazhanbas.description"),
-    img: "/image/experience/7.jpg"
+    title: t("experience.projects.shevchenko.title"),
+    slug: ["m-a", "due-diligence", "bisuness-valuation"],
+    description: t("experience.projects.shevchenko.description"),
+    img: "/image/experience/1.webp"
   }
 ];
 

@@ -60,14 +60,14 @@ export default function AdvantageSection() {
           <h3 className="text-white md:text-5xl text-4xl font-bold">
             {t("advantages.title")}
           </h3>
-          <p className="text-white text-lg max-w-[612px]">
+          <p className="text-white text-lg max-w-[612px] text-block-justify">
             {t("advantages.description")}
           </p>
         </div>
         <div className="flex flex-col gap-y-12 px-16">
           <div className="flex flex-col gap-y-6 lg:absolute top-[165px] right-0">
             <div className="relative">
-              <h5 className="text-4xl font-bold text-white">{t("advantages.expertise.title")}</h5>
+              <h5 className="text-4xl font-bold text-white text-block-justify">{t("advantages.expertise.title")}</h5>
               <h4 
                 className={`${museoModerno.className} text-8xl text-white absolute -left-14 -top-6`}
                 style={{
@@ -84,7 +84,7 @@ export default function AdvantageSection() {
           </div>
           <div className="flex flex-col gap-y-6 lg:absolute top-[460px] left-[164px]">
             <div className="relative">
-              <h5 className="text-4xl font-bold text-white">{t("advantages.licenses.title")}</h5>
+              <h5 className="text-4xl font-bold text-white text-block-justify">{t("advantages.licenses.title")}</h5>
               <h4 
                 className={`${museoModerno.className} text-8xl text-white absolute -left-14 -top-6`}
                 style={{
@@ -101,7 +101,7 @@ export default function AdvantageSection() {
           </div>
           <div className="flex flex-col gap-y-6 lg:absolute top-[520px] right-[104px]">
             <div className="relative">
-              <h5 className="text-4xl font-bold text-white">{t("advantages.support.title")}</h5>
+              <h5 className="text-4xl font-bold text-white text-block-justify">{t("advantages.support.title")}</h5>
               <h4 
                 className={`${museoModerno.className} text-8xl text-white absolute -left-14 -top-6`}
                 style={{
@@ -118,7 +118,7 @@ export default function AdvantageSection() {
           </div>
           <div className="flex flex-col gap-y-6 lg:absolute bottom-[168px] left-[62px]">
             <div className="relative">
-              <h5 className="text-4xl font-bold text-white">{t("advantages.flexibility.title")}</h5>
+              <h5 className="text-4xl font-bold text-white text-block-justify">{t("advantages.flexibility.title")}</h5>
               <h4 
                 className={`${museoModerno.className} text-8xl text-white absolute -left-16 -top-6`}
                 style={{

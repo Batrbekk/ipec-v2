@@ -19,7 +19,7 @@ export default function HeroSection() {
 				loop
 				playsInline
 			>
-				<source src="/video/ipec.mp4" type="video/mp4" />
+				<source src="/video/ipec2.mp4" type="video/mp4" />
 				{/* Fallback для браузеров без поддержки видео */}
 				<div className="absolute top-0 left-0 w-full h-full bg-ipec-blue" />
 			</video>

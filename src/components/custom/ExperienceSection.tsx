@@ -40,7 +40,7 @@ export default function ExperienceSection() {
         <h3 className="text-ipec-blue text-5xl font-bold">
           {t("experienceSection.title")}
         </h3>
-        <p className="text-ipec-grey max-w-[780px]">
+        <p className="text-ipec-grey max-w-[780px] text-block-justify">
           {t("experienceSection.description")}
         </p>
       </div>

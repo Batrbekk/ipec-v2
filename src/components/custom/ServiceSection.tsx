@@ -12,7 +12,7 @@ export default function ServiceSection() {
         <h2 className="text-black text-[32px] md:text-5xl font-regular max-w-[398px] md:max-w-[680px] lg:max-w-[900px]">
           {t("services.title")}
         </h2>
-        <p className="text-ipec-grey text-base font-regular max-w-[398px] md:max-w-[680px] lg:max-w-[780px]">
+        <p className="text-ipec-grey text-base md:text-xl font-regular max-w-[398px] md:max-w-[680px] lg:max-w-[740px] text-block-justify">
           {t("services.description")}
         </p>
       </div>

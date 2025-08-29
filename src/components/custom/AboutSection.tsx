@@ -22,10 +22,10 @@ export default function AboutSection() {
         <h2 className="text-white text-5xl font-regular">
           {t("about.subtitle")}
         </h2>
-        <p className="text-white text-base lg:text-xl font-regular max-w-[780px]">
+        <p className="text-white text-base lg:text-xl font-regular max-w-[780px] text-block-justify">
           {t("about.description1")}
         </p>
-        <p className="text-white text-base lg:text-xl font-regular max-w-[780px]">
+        <p className="text-white text-base lg:text-xl font-regular max-w-[780px] text-block-justify">
           {t("about.description2")}
         </p>
         <Button 

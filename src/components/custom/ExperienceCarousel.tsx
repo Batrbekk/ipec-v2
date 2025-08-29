@@ -49,6 +49,16 @@ export default function ExperienceCarousel({ onTabChange }: ExperienceCarouselPr
       id: 7,
       slug: ["new-technologies"],
       title: t("experience.categories.newTechnologies")
+    },
+    {
+      id: 8,
+      slug: ["bisuness-valuation"],
+      title: t("experience.categories.bisuness-valuation")
+    },
+    {
+      id: 9,
+      slug: ["valuation-spe-prms"],
+      title: t("experience.categories.valuation-spe-prms")
     }
   ], [t]);
 

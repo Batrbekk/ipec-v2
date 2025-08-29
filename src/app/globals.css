@@ -93,3 +93,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.text-block-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
