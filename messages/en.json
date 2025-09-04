@@ -103,12 +103,12 @@
         "description": "Development of a full-scale feasibility study for a significant oil and gas condensate asset in the Aktobe region in accordance with the Law of the Republic of Kazakhstan 1.02-04-2022"
       },
       "karazhanbas": {
-        "title": "North Karazhanbas and Kamenistoye",
-        "description": "Comprehensive management of oil operators at North Karazhanbas and Kamenistoye fields"
+        "title": "North Karazhanbas",
+        "description": "Integrated management of oil operators in the North Karazhanbas fields"
       },
       "kamenistoe": {
-        "title": "Stony",
-        "description": "Integrated management of oil operators at the Stony fields"
+        "title": "Kamenistoe",
+        "description": "Integrated management of oil operators at the Kamenistoe fields"
       }
     }
   },
