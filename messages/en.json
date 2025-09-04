@@ -80,7 +80,7 @@
     "projects": {
       "shevchenko": {
         "title": "Comprehensive inspection of nickel-cobalt deposit in Kazakhstan",
-        "description": "Comprehensive due diligence of the nickel-cobalt deposit, including financial, tax, legal and technical analysis."
+        "description": "Comprehensive due diligence of the nickel-cobalt deposit, including financial, tax, legal and technical analysis"
       },
       "kultuk": {
         "title": "Kultuk Oil and Gas Project Feasibility Study",
@@ -92,11 +92,11 @@
       },
       "vagonservice": {
         "title": "Inventory management system for a subsidiary of the national railway carrier",
-        "description": "Implementation of an automated inventory management system for a subsidiary of the largest national railway carrier in Kazakhstan."
+        "description": "Implementation of an automated inventory management system for a subsidiary of the largest national railway carrier in Kazakhstan"
       },
       "kazmortransflot": {
         "title": "Cargo transportation system for the national maritime carrier of Kazakhstan",
-        "description": "Development of a digitalization system for cargo transportation processes, covering the entire logistics cycle — from route planning to fleet monitoring and load optimization."
+        "description": "Development of a digitalization system for cargo transportation processes, covering the entire logistics cycle — from route planning to fleet monitoring and load optimization"
       },
       "urikhtau": {
         "title": "Feasibility study of the largest oil and gas condensate field in the Aktobe region",
