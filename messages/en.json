@@ -105,6 +105,10 @@
       "karazhanbas": {
         "title": "North Karazhanbas and Kamenistoye",
         "description": "Comprehensive management of oil operators at North Karazhanbas and Kamenistoye fields"
+      },
+      "kamenistoe": {
+        "title": "Stony",
+        "description": "Integrated management of oil operators at the Stony fields"
       }
     }
   },
