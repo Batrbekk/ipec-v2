@@ -8,6 +8,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-instrument-sans);
   
+  /* Custom Breakpoints */
+  --breakpoint-xl-boundary: 87.4375rem; /* 1399px */
+  --breakpoint-xl-custom: 87.5rem; /* 1400px */
+  
   /* IPEC Brand Colors */
   --color-ipec-grey: #6C6969;
   --color-light-grey: #DCE1E1;

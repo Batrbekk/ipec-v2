@@ -4,7 +4,7 @@ import ServicesCarousel from "./ServicesCarousel";
 export default function ServiceSection() {
 	const t = useTranslations();
 	return (
-		<section id="services" className="py-30 container mx-auto flex flex-col gap-y-10 px-4 md:px-8 lg:px-0">
+		<section id="services" className="py-30 container mx-auto flex flex-col gap-y-10 px-4 md:px-8 xl-custom:px-0">
       <div className="flex flex-col gap-y-4 md:gap-y-6">
         <h3 className="text-ipec-blue text-2xl md:text-4xl font-bold">
           {t("services.subtitle")}

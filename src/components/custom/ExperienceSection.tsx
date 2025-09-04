@@ -35,7 +35,7 @@ export default function ExperienceSection() {
   };
 
   return (
-    <section id="experience" className="py-30 px-4 md:px-8 lg:px-0 container mx-auto flex flex-col gap-y-16">
+    <section id="experience" className="py-30 px-4 md:px-8 xl-custom:px-0 container mx-auto flex flex-col gap-y-16">
       <div className="flex flex-col gap-y-6">
         <h3 className="text-ipec-blue text-5xl font-bold">
           {t("experienceSection.title")}

@@ -27,7 +27,7 @@ export default function Footer() {
         `,
         backgroundSize: '20px 20px'
     }}>
-      <div className="container mx-auto flex flex-col gap-y-8 px-4 md:px-8 lg:px-0">
+      <div className="container mx-auto flex flex-col gap-y-8 px-4 md:px-8 xl-custom:px-0">
         <div className="w-full flex flex-col lg:flex-row lg:items-start gap-y-8"> 
           <div className="w-full lg:w-1/2 flex flex-col gap-y-6">
             <h3 className="text-white text-2xl font-bold">
