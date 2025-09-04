@@ -28,6 +28,9 @@ export default function AboutSection() {
         <p className="text-white text-base lg:text-xl font-regular max-w-[780px] text-block-justify">
           {t("about.description2")}
         </p>
+        <p className="text-white text-base lg:text-xl font-regular max-w-[780px] text-block-justify">
+          {t("about.description3")}
+        </p>
         <Button 
           className="bg-ipec-blue hover:bg-hover-ipec-blue text-white max-w-full md:max-w-xs rounded-none flex items-center justify-between !px-6 !py-3.5 h-fit text-lg"
           onClick={() => scrollToSection('contact')}

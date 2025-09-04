@@ -19,7 +19,7 @@ export const getExperienceCards = (t: (key: string) => string): ExperienceCardDa
     title: t("experience.projects.karazhanbas.title"),
     slug: ["management"],
     description: t("experience.projects.karazhanbas.description"),
-    img: "/image/experience/7.jpg"
+    img: "/image/experience/7.png"
   },
   {
     id: 3,

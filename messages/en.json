@@ -69,7 +69,7 @@
     "categories": {
       "all": "All work",
       "management": "Asset Management", 
-      "oilService": "Oil Service",
+      "oilService": "Engineering Services",
       "maDeals": "M&A Deal Support",
       "dueDiligence": "Due Diligence",
       "automation": "Business Process Automation",
@@ -79,28 +79,28 @@
     },
     "projects": {
       "shevchenko": {
-        "title": "Shevchenko Deposit",
-        "description": "Comprehensive review and feasibility study development for nickel-cobalt deposit. Financial, tax, legal and technical due diligence. Joint feasibility study development with Wardell Armstrong International, Bateman, Oriel Resources"
+        "title": "Comprehensive inspection of nickel-cobalt deposit in Kazakhstan:",
+        "description": "Comprehensive due diligence of the nickel-cobalt deposit, including financial, tax, legal and technical analysis."
       },
       "kultuk": {
         "title": "Kultuk Oil and Gas Project Feasibility Study",
         "description": "Full-scale feasibility study of the Kultuk oil and gas project for the Ministry of Finance of Azerbaijan"
       },
       "kalamkas": {
-        "title": "Reserves assessment for «Mangistaumunaigas» JSC",
-        "description": "Assessment of oil reserves according to SPE PRMS standards at 15 fields, including Kalamkas and Zhetibai"
+        "title": "Oil reserves assessment for the largest subsurface user in the Mangystau region:",
+        "description": "Reserves assessment according to SPE-PRMS standards at 15 fields in the Mangystau region with total production of over 6 million tons of oil per year"
       },
       "vagonservice": {
-        "title": "JSC Vagonservice",
-        "description": "Warehouse inventory management system for JSC Vagonservice"
+        "title": "Inventory management system for a subsidiary of the national railway carrier:",
+        "description": "Implementation of an automated inventory management system for a subsidiary of the largest national railway carrier in Kazakhstan."
       },
       "kazmortransflot": {
-        "title": "LLP NMSK Kazmortransflot",
-        "description": "Cargo transportation system for LLP NMSK Kazmortransflot"
+        "title": "Cargo transportation system for the national maritime carrier of Kazakhstan:",
+        "description": "Development of a digitalization system for cargo transportation processes, covering the entire logistics cycle — from route planning to fleet monitoring and load optimization."
       },
       "urikhtau": {
-        "title": "Urikhtau Field Feasibility Study",
-        "description": "Development of full-scale feasibility study for Urikhtau field in accordance with Building Code RK 1.02-04-2022"
+        "title": "Feasibility study of the largest oil and gas condensate field in the Aktobe region:",
+        "description": "Development of a full-scale feasibility study for a significant oil and gas condensate asset in the Aktobe region in accordance with the Law of the Republic of Kazakhstan 1.02-04-2022"
       },
       "karazhanbas": {
         "title": "North Karazhanbas and Kamenistoye",
@@ -111,8 +111,9 @@
   "about": {
     "title": "About us",
     "subtitle": "IPEC Energy",
-    "description1": "An independent research and business analytics company providing clients with reliable data and strategic insights for more effective decision making, especially in the oil & gas and mining industries.",
-    "description2": "IPEC Energy is a 'house of knowledge' bringing together experts with international experience at Halliburton, Schlumberger, investment banks, and Big Three and Big Four consulting companies. We work at the intersection of engineering, economics-finance, law and IT, providing an integrated approach to solving complex problems.",
+    "description1": "IPEC Energy is an independent research and business intelligence company that turns data into strategic decisions. We provide clients with trusted analytics and actionable insights to help them confidently make key decisions in the oil, gas and mining industries.",
+    "description2": "IPEC Energy brings together world-class experts with experience from Halliburton, Schlumberger, leading investment banks, as well as Big Three and Big Four consulting firms.",
+    "description3": "We work at the intersection of engineering, economics and finance, law and IT, offering an integrated approach to the most complex business problems. Our solutions are based on deep expertise and result-oriented.",
     "contactButton": "Contact us"
   },
   "hero": {
@@ -174,8 +175,8 @@
       }
     },
     "oilService": {
-      "title": "Oil Service",
-      "description": "Professional oil service solutions",
+      "title": "Engineering Services",
+      "description": "Professional engineering service solutions",
       "details": {
         "development": "Development of company development strategy in oil and gas industry",
         "anticrisis": "Anti-crisis management and restructuring",
@@ -218,7 +219,7 @@
         ]
       },
       "oilService": {
-        "title": "Oil Service",
+        "title": "Engineering Services",
         "services": [
           "Development of technical and economic feasibility studies (TEFS)",
           "Construction and interpretation of 3D geological models",
