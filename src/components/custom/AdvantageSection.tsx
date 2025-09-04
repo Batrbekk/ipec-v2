@@ -60,7 +60,7 @@ export default function AdvantageSection() {
           <h3 className="text-white md:text-5xl text-4xl font-bold">
             {t("advantages.title")}
           </h3>
-          <p className="text-white text-lg max-w-[565px] text-block-justify">
+          <p className="text-white text-lg max-w-[565px] xl-custom:max-w-[612px] text-block-justify">
             {t("advantages.description")}
           </p>
         </div>
