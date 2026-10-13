@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
-            Новое обращение с сайта IPEC Energy
+            Новое обращение с сайта IPEC Energy Kazakhstan
           </h2>
           
           <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
           </div>
 
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; font-size: 12px; color: #6c757d;">
-            <p>Это письмо было отправлено автоматически с сайта IPEC Energy.</p>
+            <p>Это письмо было отправлено автоматически с сайта IPEC Energy Kazakhstan.</p>
             <p>Дата отправки: ${new Date().toLocaleString("ru-RU", {
               timeZone: "Asia/Almaty",
             })}</p>
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       `,
       // Также добавим текстовую версию
       text: `
-        Новое обращение с сайта IPEC Energy
+        Новое обращение с сайта IPEC Energy Kazakhstan
 
         Имя: ${name}
         Email: ${email}

@@ -114,14 +114,14 @@
   },
   "about": {
     "title": "About us",
-    "subtitle": "IPEC Energy",
-    "description1": "IPEC Energy is an independent research and business intelligence company that turns data into strategic decisions. We provide clients with trusted analytics and actionable insights to help them confidently make key decisions in the oil, gas and mining industries.",
-    "description2": "IPEC Energy brings together world-class experts with experience from Halliburton, Schlumberger, leading investment banks, as well as Big Three and Big Four consulting firms.",
+    "subtitle": "IPEC Energy Kazakhstan",
+    "description1": "IPEC Energy Kazakhstan is an independent research and business intelligence company that turns data into strategic decisions. We provide clients with trusted analytics and actionable insights to help them confidently make key decisions in the oil, gas and mining industries.",
+    "description2": "IPEC Energy Kazakhstan brings together world-class experts with experience from Halliburton, Schlumberger, leading investment banks, as well as Big Three and Big Four consulting firms.",
     "description3": "We work at the intersection of engineering, economics and finance, law and IT, offering an integrated approach to the most complex business problems. Our solutions are based on deep expertise and result-oriented.",
     "contactButton": "Contact us"
   },
   "hero": {
-    "title": "IPEC Energy - Integrated Petroleum Engineering Company",
+    "title": "IPEC Energy Kazakhstan - Integrated Petroleum Engineering Company",
     "contactButton": "Contact us"
   },
   "advantages": {
@@ -148,7 +148,7 @@
   },
   "experienceSection": {
     "title": "Our experience",
-    "description": "IPEC Energy combines expertise in asset management, feasibility study development, independent reserves assessment, business process automation and deal support. We work at all stages of the project lifecycle - from strategic planning and technical design to solution implementation and operational efficiency achievement.",
+    "description": "IPEC Energy Kazakhstan combines expertise in asset management, feasibility study development, independent reserves assessment, business process automation and deal support. We work at all stages of the project lifecycle - from strategic planning and technical design to solution implementation and operational efficiency achievement.",
     "showMore": "Show more"
   },
   "footer": {
@@ -158,11 +158,11 @@
     "contacts": "Contacts",
     "address": "Address",
     "addressText": "Astana, Turan Avenue 30A, 6th floor, office 607 SAT Tower Business Center",
-    "copyright": "© 2017 - 2025 IPEC Energy. All rights reserved."
+    "copyright": "© 2017 - 2025 IPEC Energy Kazakhstan. All rights reserved."
   },
   "services": {
     "subtitle": "What we do",
-    "title": "IPEC Energy - a comprehensive solution for your company",
+    "title": "IPEC Energy Kazakhstan - a comprehensive solution for your company",
     "description": "We form a synergistic approach, combining engineering, financial-economic, legal IT expertise to provide our clients with complete support - from idea to implementation.",
     "assetManagement": {
       "title": "Asset Management",
