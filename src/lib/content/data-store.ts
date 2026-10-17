@@ -12,7 +12,7 @@ function localDirectory(): string | undefined {
 }
 
 export function storageConfigured(): boolean {
-  return !!(process.env.BLOB_READ_WRITE_TOKEN || localDirectory());
+  return !!(process.env.CMS_BLOB_READ_WRITE_TOKEN || localDirectory());
 }
 
 export function blobHostname(): string | undefined {
@@ -36,8 +36,14 @@ export async function readJson<T>(key: string): Promise<StoredJson<T> | null> {
       throw error;
     }
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN) throw new StorageUnavailableError('Хранилище не подключено.');
-  const result = await get(key, { access: 'public', useCache: false, abortSignal: AbortSignal.timeout(12000) });
+  const token = process.env.CMS_BLOB_READ_WRITE_TOKEN;
+  if (!token) throw new StorageUnavailableError('Хранилище не подключено.');
+  const result = await get(key, {
+    token, access: 'private', useCache: false,
+    // Compressed HTTP responses have weak ETags that Blob conditional writes reject.
+    headers: { 'accept-encoding': 'identity' },
+    abortSignal: AbortSignal.timeout(12000),
+  });
   if (!result) return null;
   if (result.statusCode !== 200 || result.blob.size > 1024 * 1024) throw new Error('Invalid stored document');
   return { value: await new Response(result.stream).json(), etag: result.blob.etag };
@@ -63,10 +69,11 @@ export async function writeJson<T>(key: string, value: T, expectedEtag: string |
       return { value, etag: createHash('sha256').update(bytes).digest('hex') };
     } finally { await lock.close(); await unlink(filename + '.lock'); }
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN) throw new StorageUnavailableError('Хранилище не подключено.');
+  const token = process.env.CMS_BLOB_READ_WRITE_TOKEN;
+  if (!token) throw new StorageUnavailableError('Хранилище не подключено.');
   try {
     const result = await put(key, bytes, {
-      access: 'public', addRandomSuffix: false, contentType: 'application/json',
+      token, access: 'private', addRandomSuffix: false, contentType: 'application/json',
       cacheControlMaxAge: 60, allowOverwrite: expectedEtag !== null,
       ...(expectedEtag ? { ifMatch: expectedEtag } : {}),
       abortSignal: AbortSignal.timeout(12000),

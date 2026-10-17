@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { randomBytes } from 'node:crypto';
+import { randomBytes, randomUUID } from 'node:crypto';
+import { del } from '@vercel/blob';
 import { mkdtemp, readdir, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -15,10 +16,11 @@ import { allowLoginAttempt } from '../src/lib/admin/login-rate-limit';
 
 test('durable local storage and login limits', async t => {
   const directory = await mkdtemp(path.join(tmpdir(), 'ipec-cms-store-test-'));
-  const keys = ['CMS_LOCAL_STORE', 'VERCEL', 'BLOB_READ_WRITE_TOKEN', 'ADMIN_SESSION_SECRET'] as const;
+  const keys = ['CMS_LOCAL_STORE', 'VERCEL', 'BLOB_READ_WRITE_TOKEN', 'CMS_BLOB_READ_WRITE_TOKEN', 'ADMIN_SESSION_SECRET'] as const;
   const original = Object.fromEntries(keys.map(key => [key, process.env[key]]));
   delete process.env.VERCEL;
   delete process.env.BLOB_READ_WRITE_TOKEN;
+  delete process.env.CMS_BLOB_READ_WRITE_TOKEN;
   process.env.CMS_LOCAL_STORE = directory;
   process.env.ADMIN_SESSION_SECRET = randomBytes(32).toString('base64');
   t.after(async () => {
@@ -88,8 +90,9 @@ test('durable local storage and login limits', async t => {
     t.mock.restoreAll();
   });
 
-  await t.test('Vercel ignores CMS_LOCAL_STORE and missing Blob configuration fails closed', async () => {
+  await t.test('Vercel ignores local storage and a public media token cannot configure private CMS storage', async () => {
     process.env.VERCEL = '1';
+    process.env.BLOB_READ_WRITE_TOKEN = 'vercel_blob_rw_publicmedia_test';
     try {
       assert.equal(storageConfigured(), false);
       await assert.rejects(readJson('cms/first.json'), StorageUnavailableError);
@@ -97,8 +100,42 @@ test('durable local storage and login limits', async t => {
       await assert.rejects(allowLoginAttempt('203.0.113.44'), /Login unavailable/);
     } finally {
       delete process.env.VERCEL;
+      delete process.env.BLOB_READ_WRITE_TOKEN;
     }
     assert.equal(storageConfigured(), true);
     assert.equal(await readJson('cms/not-local.json'), null);
   });
+});
+
+test('private Blob preserves strong ETags and fresh large documents across conditional writes', {
+  skip: process.env.RUN_BLOB_STORAGE_TESTS !== '1',
+}, async t => {
+  const token = process.env.CMS_BLOB_READ_WRITE_TOKEN;
+  assert.ok(token, 'CMS_BLOB_READ_WRITE_TOKEN is required for this opt-in integration test.');
+  const originalLocal = process.env.CMS_LOCAL_STORE;
+  delete process.env.CMS_LOCAL_STORE;
+  const pathname = `cms-qa/${randomUUID()}.json`;
+  t.after(async () => {
+    try { await del(pathname, { token }); }
+    finally {
+      if (originalLocal === undefined) delete process.env.CMS_LOCAL_STORE;
+      else process.env.CMS_LOCAL_STORE = originalLocal;
+    }
+  });
+  const largeText = 'Representative multilingual CMS content. '.repeat(2000);
+  const first = await writeJson(pathname, { revision: 1, text: largeText }, null);
+  const initialRead = await readJson<{ revision: number; text: string }>(pathname);
+  assert.deepEqual(initialRead, first);
+  assert.match(initialRead!.etag, /^"[^"]+"$/);
+  const second = await writeJson(pathname, { revision: 2, text: largeText }, initialRead!.etag);
+  assert.deepEqual(await readJson(pathname), second);
+  await assert.rejects(writeJson(pathname, { revision: 3, text: largeText }, first.etag), StorageConflictError);
+  const writes = await Promise.allSettled([
+    writeJson(pathname, { revision: 4, text: largeText }, second.etag),
+    writeJson(pathname, { revision: 5, text: largeText }, second.etag),
+  ]);
+  const successful = writes.filter(result => result.status === 'fulfilled');
+  assert.equal(successful.length, 1);
+  for (const result of writes) if (result.status === 'rejected') assert.ok(result.reason instanceof StorageConflictError);
+  if (successful[0].status === 'fulfilled') assert.deepEqual(await readJson(pathname), successful[0].value);
 });
