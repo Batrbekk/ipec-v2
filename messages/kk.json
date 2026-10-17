@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "IPEC Energy Kazakhstan",
+    "description": "Integrated Petroleum Engineering Company",
+    "logoAlt": "IPEC Energy Kazakhstan"
+  },
   "navigation": {
     "services": "Біз немен айналысамыз",
     "advantages": "Артықшылықтар",
@@ -35,6 +40,16 @@
     }
   },
   "contact": {
+    "email": {
+      "notificationHeading": "IPEC Energy Kazakhstan сайтынан жаңа өтініш",
+      "automaticMessage": "Бұл хат IPEC Energy Kazakhstan сайтынан автоматты түрде жіберілді.",
+      "dateLabel": "Жіберілген күні",
+      "clientInfo": "Клиент туралы ақпарат",
+      "nameLabel": "Аты",
+      "emailLabel": "Email",
+      "companyLabel": "Компания",
+      "descriptionLabel": "Өтініш сипаттамасы"
+    },
     "form": {
       "name": "Аты",
       "email": "Электрондық пошта",

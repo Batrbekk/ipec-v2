@@ -4,14 +4,17 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useTranslations } from "next-intl";
+import { useSiteContent } from "./SiteContentProvider";
 
 export default function AboutSection() {
   const t = useTranslations();
+  const { media } = useSiteContent();
   const { scrollToSection } = useScrollToSection();
   return (
     <section 
       id="about"
-      className="py-30 px-4 md:px-8 lg:px-[4.5rem] bg-[url('/image/about/1.png')] bg-cover bg-center bg-no-repeat relative"
+      className="py-30 px-4 md:px-8 lg:px-[4.5rem] bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `url(${JSON.stringify(media.aboutImage)})` }}
     >
       <div className="absolute inset-0 bg-black/20" />
 

@@ -4,22 +4,25 @@ import { Button } from "../ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useTranslations } from "next-intl";
+import { useSiteContent } from "./SiteContentProvider";
 
 export default function HeroSection() {
 	const t = useTranslations();
+	const { media } = useSiteContent();
 	const { scrollToSection } = useScrollToSection();
 
 	return (
 		<section className="relative h-[45rem] bg-ipec-blue overflow-visible">
 			{/* Фоновое видео */}
 			<video
+				key={media.heroVideo}
+				src={media.heroVideo}
 				className="absolute top-0 left-0 w-full h-full object-cover"
 				autoPlay
 				muted
 				loop
 				playsInline
 			>
-				<source src="/video/ipec2.mp4" type="video/mp4" />
 				{/* Fallback для браузеров без поддержки видео */}
 				<div className="absolute top-0 left-0 w-full h-full bg-ipec-blue" />
 			</video>

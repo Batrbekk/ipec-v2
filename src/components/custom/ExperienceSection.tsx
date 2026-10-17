@@ -7,14 +7,16 @@ import ExperienceCarousel from "./ExperienceCarousel";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 import { getExperienceCards } from "../../data/experienceData";
+import { useSiteContent } from "./SiteContentProvider";
 
 export default function ExperienceSection() {
   const t = useTranslations();
+  const { media } = useSiteContent();
   const [activeSlug, setActiveSlug] = useState<string>("all");
   const [visibleCount, setVisibleCount] = useState<number>(3);
   
   // Используем переводы для данных опыта
-  const translatedExperienceCards = getExperienceCards(t);
+  const translatedExperienceCards = getExperienceCards(t, media);
 
   // Фильтрация карточек по активному slug
   const filteredCards = activeSlug === "all" 

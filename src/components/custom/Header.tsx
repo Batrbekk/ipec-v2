@@ -7,9 +7,12 @@ import { useTranslations } from 'next-intl';
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { useSiteContent } from "./SiteContentProvider";
 
 export default function Header() {
 	const t = useTranslations('navigation');
+	const tMeta = useTranslations('meta');
+	const { media } = useSiteContent();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const { scrollToSection } = useScrollToSection();
 
@@ -43,7 +46,7 @@ export default function Header() {
     <header className="w-full h-14 bg-ipec-blue flex items-center justify-between relative">
       <div className="flex items-center h-full">
 				<Link href="/" className="h-14 w-[148px] relative">
-					<Image src="/image/logo.svg" alt="IPEC Energy Kazakhstan" fill />
+					<Image src={media.headerLogo} alt={tMeta('logoAlt')} fill className="object-contain" unoptimized />
 				</Link>
 				<div className="hidden lg:flex items-center h-full">
 					{navLinks.map((link) => (

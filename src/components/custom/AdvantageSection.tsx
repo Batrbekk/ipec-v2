@@ -142,8 +142,8 @@ export default function AdvantageSection() {
             {t("advantages.contactButton")}
             <ArrowRight className="!w-6 !h-6" />
           </Button>
-          <p className="text-white">
-            {t("advantages.contactDescription").split('.')[0]}. <br /> {t("advantages.contactDescription").split('.')[1]?.trim()}.
+          <p className="text-white whitespace-pre-line">
+            {t("advantages.contactDescription")}
           </p>
         </div>
       </div>

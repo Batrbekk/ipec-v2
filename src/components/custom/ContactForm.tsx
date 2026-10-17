@@ -5,7 +5,7 @@ import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -35,6 +35,7 @@ type FormData = {
 
 export default function ContactForm() {
   const t = useTranslations();
+  const locale = useLocale();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formSchema = createFormSchema(t);
 
@@ -56,6 +57,7 @@ export default function ContactForm() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept-Language": locale,
         },
         body: JSON.stringify(data),
       });

@@ -5,10 +5,12 @@ import ContactForm from "./ContactForm";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { useSiteContent } from "./SiteContentProvider";
 
 export default function Footer() {
   const tNav = useTranslations('navigation');
   const t = useTranslations();
+  const { media, settings } = useSiteContent();
   const { scrollToSection } = useScrollToSection();
   
   const navLinks = [
@@ -43,22 +45,22 @@ export default function Footer() {
           <ContactForm />
         </div>
         <Link href="/" className="max-w-[190px]">
-          <Image src="/image/white-logo.svg" alt="IPEC Energy Kazakhstan" width={183} height={52} className="w-full h-auto" />
+          <Image src={media.footerLogo} alt={t("meta.logoAlt")} width={183} height={52} className="w-full h-auto" unoptimized />
         </Link>
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between pb-8 border-b border-white gap-y-8">
           <div className="flex flex-col md:flex-row items-start gap-y-8 gap-x-8">
             <div className="flex flex-col gap-y-3 w-[250px]">
               <h6 className="text-white text-2xl font-bold">{t("footer.contacts")}</h6>
-              <Link href="tel:+77073214177" className="text-white text-lg">
-                +7-(707)-321-41-77
+              <Link href={settings.phoneHref} className="text-white text-lg">
+                {settings.phoneDisplay}
               </Link>
-              <Link href="mailto:info@ipec-energy.com" className="text-white text-lg">
-                info@ipec-energy.com
+              <Link href={`mailto:${settings.email}`} className="text-white text-lg">
+                {settings.email}
               </Link>
             </div>
             <div className="flex flex-col gap-y-3 w-[250px]">
               <h6 className="text-white text-2xl font-bold">{t("footer.address")}</h6>
-              <Link href="https://yandex.kz/maps/ru/-/CHhIyUZ1" target="_blank" className="text-white text-lg">
+              <Link href={settings.mapUrl} target="_blank" rel="noopener noreferrer" className="text-white text-lg">
                 {t("footer.addressText")}
               </Link>
             </div>
@@ -76,8 +78,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex items-center justify-center md:justify-end">
-          <p className="text-white text-base text-center md:text-left">
-            {t("footer.copyright").split('.')[0]}. <br className="block md:hidden" /> {t("footer.copyright").split('.')[1]?.trim()}.
+          <p className="text-white text-base text-center md:text-left whitespace-pre-line">
+            {t("footer.copyright")}
           </p>
         </div>
       </div>

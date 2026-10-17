@@ -1,50 +1,53 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import ServiceCard from "./ServiceCard";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { useSiteContent } from "./SiteContentProvider";
 
 export default function ServicesCarousel() {
   const t = useTranslations();
+  const { media } = useSiteContent();
   const [activeServiceId, setActiveServiceId] = useState<number>(1);
   const [api, setApi] = useState<CarouselApi>();
 
-  const initialServices = [
+  const initialServices = useMemo(() => [
     {
       id: 1,
       title: t("services.carousel.assetManagement.title"),
       services: t.raw("services.carousel.assetManagement.services") as string[],
-      image: "/image/services/1.png"
+      image: media.serviceAssetManagement
     },
     {
       id: 2,
       title: t("services.carousel.oilService.title"),
       services: t.raw("services.carousel.oilService.services") as string[],
-      image: "/image/services/2.png"
+      image: media.serviceOilService
     },
     {
       id: 3,
       title: t("services.carousel.maDeals.title"),
       services: t.raw("services.carousel.maDeals.services") as string[],
-      image: "/image/services/3.png"
+      image: media.serviceMaDeals
     },
     {
       id: 4,
       title: t("services.carousel.dueDiligenceCarousel.title"),
       services: t.raw("services.carousel.dueDiligenceCarousel.services") as string[],
-      image: "/image/services/4.png"
+      image: media.serviceDueDiligence
     },
     {
       id: 5,
       title: t("services.carousel.automation.title"),
       services: t.raw("services.carousel.automation.services") as string[],
-      image: "/image/services/5.png"
+      image: media.serviceAutomation
     }
-  ];
+  ], [t, media]);
 
-  const [services, setServices] = useState(initialServices);
+  const [serviceOrder, setServiceOrder] = useState([1, 2, 3, 4, 5]);
+  const services = useMemo(() => serviceOrder.map(id => initialServices.find(service => service.id === id)!), [serviceOrder, initialServices]);
 
   const activeService = services.find(service => service.id === activeServiceId) || services[0];
 
@@ -79,7 +82,7 @@ export default function ServicesCarousel() {
         ...initialServices.slice(clickedIndex + 1), // карточки после выбранной
         ...initialServices.slice(0, clickedIndex) // карточки до выбранной
       ];
-      setServices(reorderedServices);
+      setServiceOrder(reorderedServices.map(service => service.id));
       
       // Переходим к первому слайду после перестановки
       setTimeout(() => {

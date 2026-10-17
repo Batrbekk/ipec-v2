@@ -1,36 +1,22 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { instrumentSans } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/sonner";
-import Header from "@/components/custom/Header";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getLocale } from 'next-intl/server';
-import Footer from "@/components/custom/Footer";
-
-export const metadata: Metadata = {
-  title: "IPEC Energy Kazakhstan",
-  description: "Integrated Petroleum Engineering Company",
-};
+import { getUserLocale } from "@/i18n/utils";
 
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+  const locale = await getUserLocale();
 
   return (
     <html lang={locale}>
       <body
         className={`${instrumentSans.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster />
-        </NextIntlClientProvider>
+        {children}
+        <Toaster />
       </body>
     </html>
   );
